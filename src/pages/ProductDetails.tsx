@@ -39,12 +39,12 @@ const ProductDetails : React.FC = () => {
       {/* <Card.Img className="mx-auto d-block" src="../../public/car.png" style={{ objectFit: "cover", maxWidth: "18rem" }} /> */}
       <Card.Body>
         <Card.Text>
-          {products?.description}
+          {products?.body}
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>{products?.category}</ListGroup.Item>
-        <ListGroup.Item>${products?.price} USD</ListGroup.Item>
+        <ListGroup.Item>Smart One</ListGroup.Item>
+        <ListGroup.Item>$49.90 USD</ListGroup.Item>
         {/* <ListGroup.Item>{products?.rating[rate]}</ListGroup.Item> */}
       </ListGroup>
       <Card.Body>

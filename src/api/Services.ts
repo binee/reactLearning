@@ -3,7 +3,7 @@ import Products from '../types/Product';
 import User from '../types/User';
 
 const apiClient = axios.create({
-  baseURL: "http://localhost:4000/",
+  baseURL: "https://jsonplaceholder.typicode.com/",
   headers: {
     "Content-type": "application/json",
   },
@@ -37,12 +37,12 @@ const apiClient = axios.create({
 // }
 
 const getProducts = async () => {
-  const response = await apiClient.get<Products[]>("/products");
+  const response = await apiClient.get<Products[]>("/posts");
   return response.data;
 }
 
 const getProductsDetail = async (id: number | string) => {
-  const response = await apiClient.get<Products[]>(`products/${id}`);
+  const response = await apiClient.get<Products[]>(`posts/${id}`);
   return response.data;
 }
 

@@ -6,8 +6,9 @@ import Search from '../components/Search'
 import Service from "../api/Services";
 import Products from '../types/Product';
 import { useEffect, useState } from "react";
-import Banner from "../components/Banner";
+import {imageArray} from '../api/images';
 
+console.log(imageArray[1])
 const Product :React.FC  = () => {
   const [getResult, setGetResult] =  useState<Products[]>([]);
   const [productType, setProductType] = useState<string>('');
@@ -45,14 +46,14 @@ const loopStatement =  Array.isArray(getResult) &&  getResult.length > 0? getRes
 
       <Row md={2} xs={1} lg={3} className="g-3">
 
-         { loopStatement?.map((item) => (
+         { loopStatement?.map((item:any) => (
           <Col key={item.id} style={{cursor:'pointer'}} onClick={() => navigate(`/product/${item.id}`)}>
             <Card>
               <Card.Img
                 variant="top"
                 height="350px"
                 style={{ objectFit: "cover" }}
-                src={item?.image}
+                src={imageArray[item?.id]}
               />
               <Card.Body className="d-flex flex-column">
                 <Card.Text className="d-flex justify-content-space-between align-items-baseline mb-4">

@@ -6,7 +6,7 @@ const Banner :React.FC  =() => {
           <Carousel.Item>
             <img
               className="mx-auto d-block w-25"
-              src="../public/shoe.png"
+              src="%PUBLIC_URL%/shoe.png"
               alt="First slide"
             />
           </Carousel.Item>
